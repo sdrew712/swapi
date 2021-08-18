@@ -10,10 +10,17 @@ function clickedButton(){
       .then(res => {
         console.log(residents[i]);
         let name = res.data.name
-        let h2 = document.createElement("h2")  
-        var text = document.createTextNode(name);
-        h2.appendChild(text);  
-        document.body.appendChild(h2)
+
+        let h2 = document.createElement("h2") //create h2
+        var text = document.createTextNode(name); //create text
+
+        h2.appendChild(text);  //add text to h2
+        
+        let div = document.createElement("div") //create div
+        div.className = "name-container"
+        div.appendChild(h2) //add h2 to div
+
+        document.body.appendChild(div) //add div to body
         }     
       )
     }
